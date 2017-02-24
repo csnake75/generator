@@ -1,0 +1,95 @@
+<div>
+    <form>
+        <div class="row">
+            <div class="form-group col-md-3">
+                <label>Project</label>
+                <input type="text" class="form-control" ng-model="mock.project" ng-required="true" placeholder="Projekt">
+            </div>
+            <div class="form-group col-md-3">
+                <label>Name</label>
+                <input type="text" class="form-control" ng-model="mock.name" ng-required="true" placeholder="Name">
+            </div>
+            <div class="form-group col-md-3">
+                <label>User</label>
+                <input type="text" class="form-control" ng-model="mock.user" ng-required="true" placeholder="User">
+            </div>
+            <div class="form-group col-md-3">
+                <label>ID</label>
+                <input type="text" class="form-control" ng-model="mock._id" placeholder="_ID" ng-disabled="true">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-2">
+                <label>Fehlerwahrscheinlichk.</label>
+                <input type="number" class="form-control" ng-model="mock.successProcentage">
+            </div>
+            <div class="form-group col-md-2">
+                <label>Timeoutwahrscheinlichk.</label>
+                <input type="number" class="form-control" ng-model="mock.timeoutProcentage">
+            </div>
+            <div class="form-group col-md-2">
+                <label>Anzahl</label>
+                <input type="number" class="form-control" ng-model="mock.quantity">
+            </div>
+            <div class="form-group col-md-6">
+                <label>Request-URL</label>
+                <input type="text" class="form-control" ng-model="mock.url" ng-disabled="true" placeholder="URL">
+            </div>
+        </div>
+        <div class="row">
+            <div style="width: 100%" class="form-group col-md-12">
+                <label>Template</label>
+                <div style="width: 100%" class="form-group col-md-12"
+                     ui-ace="{mode:'json', theme:'monokai',showGutter: true,useWrapMode : true}"
+                     ng-model="mock.template"></div>
+            </div>
+        </div>
+        <div ng-if="error.data" class="row">
+            <div class="col-md-12">
+                <label>Ergebnis - Error</label>
+                <div class="alert alert-danger" role="alert">
+                    <h4>{{error.header}}</h4>
+                    <div ng-if="error.status" class="row">
+                        <strong class="col-md-1">Status:</strong>
+                        <div class="col-md-11">{{error.status}}</div>
+                    </div>
+                    <div class="row">
+                        <strong class="col-md-1">Data:</strong>
+                        <div class="col-md-11">{{error.data}}</div>
+                    </div>
+                    <div ng-if="error.statusText" class="row">
+                        <strong class="col-md-1">Text:</strong>
+                        <div class="col-md-11">{{error.statusText}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <label>Ergebnis - Tabelle</label>
+                <div style="max-height: 500px" ng-if="gridOptions.data.length > 0" ui-grid="gridOptions"
+                     ui-grid-save-state
+                     ui-grid-move-columns
+                     ui-grid-resize-columns></div>
+            </div>
+        </div>
+        <div class="row">
+            <div ng-if="gridOptions.data.length > 0" style="width: 100%" class="form-group col-md-12">
+                <label>Ergebnis - JSON</label>
+                <div style="width: 100%" class="form-group col-md-12"
+                     ui-ace="{mode:'json', theme:'monokai', showGutter: true, useWrapMode : true}"
+                     ng-readonly="true"
+                     ng-model="resData"></div>
+            </div>
+        </div>
+        <div style="margin-top: 20px" class="row">
+            <div class="col-md-12">
+                <button style="width: 100px" ng-click="save();" class="btn btn-success">Speichern</button>
+                <button style="width: 100px" ng-disabled="!mock.url" ng-click="generate();" class="btn btn-primary">
+                    Testen
+                </button>
+                <button style="width: 100px" ng-click="cancel();" class="btn btn-danger">Abbrechen</button>
+            </div>
+        </div>
+    </form>
+</div>

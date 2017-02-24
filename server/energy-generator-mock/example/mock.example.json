@@ -1,0 +1,54 @@
+{
+    "_id" : ObjectId("588a0aeb89c2e0231c580651"),
+    "user" : "Christian Schmidt",
+    "application" : "energy-invoicing",
+    "successProcentage" : 100,
+    "timeoutProcentage" : 100,
+    "quantity" : 8,
+    "template" : {
+        "date" : "DATE(1,20)",
+        "isodate" : "ISODATE(-1,-20)",
+        "name" : "NAME",
+        "firstname" : "FIRSTNAME",
+        "fullname" : "FULLNAME",
+        "phone" : "PHONE",
+        "email" : "EMAIL",
+        "homepage" : "LINK",
+        "float" : "FLOAT(1,3)",
+        "fkt" : {
+            "execute" : "function(){return Math.floor(Math.random() * (99999 - 5)) + 5;}"
+        },
+        "str" : {
+            "enum" : "Hier steht immer derselbe Text"
+        },
+        "rest" : "REST('127.0.0.1',3000, '/mockdatas/588a107e22fb4e0ad890d039/generate')",
+        "mock" : "MOCK('588a0aef89c2e0231c580652')",
+        "parties" : {
+            "company" : "COMPANY",
+            "test" : {
+                "street" : "STREET",
+                "city" : "CITY",
+                "zip" : "ZIP",
+                "test" : {
+                    "int" : "INT",
+                    "string" : "STRING(10)",
+                    "fkt" : {
+                        "execute" : "function(){return 110;}"
+                    },
+                    "test" : {
+                        "yyname" : "YNAME",
+                        "text" : "TEXT(1000)",
+                        "abcd" : {
+                            "random" : "RANDOM(1,2,3,4, 'null', null, 'keine Ahnung')",
+                            "boolean" : "BOOLEAN",
+                            "invoice" : "PDF",
+                            "fkt" : {
+                                "execute" : "function(){return 110;}"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

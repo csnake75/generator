@@ -1,0 +1,1 @@
+from .osgi import OSGIGenerator

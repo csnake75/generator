@@ -1,0 +1,11 @@
+{
+  "_id" : ObjectId("588a107e22fb4e0ad890d039"),
+  "successProcentage" : 100,
+  "timeoutProcentage" : 100,
+  "quantity" : 8,
+  "template" : {
+    "MOCKTEM" : {
+      "enum" : "function(){return 'Ein Funktion als Enum'}"
+    }
+  }
+}

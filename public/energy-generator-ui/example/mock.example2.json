@@ -1,0 +1,17 @@
+{
+  "_id" : ObjectId("588a0aef89c2e0231c580652"),
+  "name" : "world_no_safe",
+  "user" : "Christian Schmidt",
+  "application" : "energy-invoicing",
+  "successProcentage" : 100,
+  "timeoutProcentage" : 100,
+  "quantity" : 10,
+  "template" : {
+    "SUBOBJECT_Date" : "DATE(1,20)",
+    "SUBOBJECT_Name" : "NAME",
+    "SUBOBJECT_Firstname" : "FIRSTNAME",
+    "SUBOBJECT_Fullname" : "FULLNAME",
+    "SUBOBJECT_Float" : "FLOAT(1,3)",
+    "SUBOBJECT_Rest" : "REST('127.0.0.1',3000, '/mockdatas/588a108422fb4e0ad890d03a/generate')"
+  }
+}

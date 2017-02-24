@@ -1,0 +1,9 @@
+{
+  "name": "energy-generator",
+  "version": "0.0.1",
+  "scripts": {
+  	"preinstall": "npm i -g forever concurrently nodemon bower",
+    "forever": "concurrently \"forever start ../public/energy-generator-ui/bin/www\" \"forever start ../server/energy-generator-mock/bin/www\" \"forever start ../server/energy-generator-code/bin/www\"",
+    "nodemon": "concurrently \"nodemon ../public/energy-generator-ui/bin/www\" \"nodemon ../server/energy-generator-mock/bin/www\" \"nodemon ../server/energy-generator-code/bin/www\""
+  }
+}

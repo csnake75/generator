@@ -1,0 +1,93 @@
+{
+    "_id" : ObjectId("58aef85ba885da6f9ce056f3"),
+    "name" : "FPM_P1",
+    "groupId" : "de.kisters.energy",
+    "artifactId" : "energy-sales-manager",
+    "appName" : "EnergySalesManagerApp",
+    "packagesToBuild" : {
+        "service_api" : true,
+        "ui" : true
+    },
+    "database" : {
+        "host" : "127.0.0.1",
+        "read_one" : true,
+        "read_all" : true,
+        "create" : true,
+        "update" : true,
+        "delete" : true
+    },
+    "ui" : {
+        "angular" : true,
+        "ui_grid" : true,
+        "edit_in_dialog" : true,
+        "createMock" : true
+    },
+    "backend" : {
+        "dm_impl" : true,
+        "dm_api" : true
+    },
+    "template" : {
+        "address" : {
+            "street" : {
+                "type" : "String",
+                "label" : "Street",
+                "required" : true,
+                "max_length" : 512,
+                "ui_type" : "text"
+            },
+            "city" : {
+                "type" : "String",
+                "label" : "City",
+                "required" : true,
+                "ui_type" : "select"
+            },
+            "zip" : {
+                "type" : "Int",
+                "label" : "Zip",
+                "required" : true,
+                "min" : 1111,
+                "max" : 99999,
+                "round" : 0,
+                "ui_type" : "text"
+            },
+            "addon" : {
+                "type" : "String",
+                "label" : "Add On",
+                "required" : false,
+                "max_length" : 512,
+                "ui_type" : "text"
+            }
+        },
+        "user" : {
+            "street" : {
+                "type" : "String",
+                "label" : "Street",
+                "required" : true,
+                "max_length" : 512,
+                "ui_type" : "text"
+            },
+            "city" : {
+                "type" : "String",
+                "label" : "City",
+                "required" : true,
+                "ui_type" : "select"
+            },
+            "zip" : {
+                "type" : "Int",
+                "label" : "Zip",
+                "required" : true,
+                "min" : 1111,
+                "max" : 99999,
+                "round" : 0,
+                "ui_type" : "text"
+            },
+            "addon" : {
+                "type" : "String",
+                "label" : "Add On",
+                "required" : false,
+                "max_length" : 512,
+                "ui_type" : "text"
+            }
+        }
+    }
+}

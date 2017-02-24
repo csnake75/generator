@@ -1,0 +1,17 @@
+cd ../public/energy-generator-ui
+echo "installing energy-generator"
+call npm install --silent
+call bower install --silent
+echo "energy-generator-ui is installed"
+
+cd ../../server/energy-generator-mock
+call npm install --silent
+echo "energy-generator-mock is installed"
+
+cd ../../server/energy-generator-code
+call npm install --silent
+echo "energy-generator-code is installed"
+
+echo "starting energy-generator"
+cd ../../bin/
+npm start

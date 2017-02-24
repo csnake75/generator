@@ -1,0 +1,62 @@
+{
+	_id: 132464686643,
+	name: "FPM_P1",
+	groupId:"de.kisters.energy",
+	artifactId:"energy-sales-manager",
+	appName: "EnergySalesManagerApp",
+	packagesToBuild: {
+		service_api: true,
+		ui: true,
+		....
+	},
+	database:{
+		host: ...,
+		...
+	}
+	ui:{
+		js: "Angular",
+		grid: "UI-Grid",
+		editInDialog: true,
+		createMock: true,
+	},
+	backend:{
+		CRUD: true,
+		right: ...
+	}
+	template:{
+		address:{
+			street:{
+				type: String,
+				label: "Street"
+				required: true,
+				max-length:512,
+				ui-type: "text"
+			},
+			city:{
+				type: String,
+				label: "City",
+				required: true,
+				ui-type: "select"
+			},
+			zip:{
+				type: Int,
+				label: "Zip",
+				required: true,
+				min: 01111,
+				max: 99999,
+				round: 0,
+				ui-type: "text"
+			}
+			addon:{
+				type: String,
+				label: "Add On"
+				required: false,
+				max-length:512,
+				ui-type: "text"
+			}
+		},
+		user:{
+			...
+		}
+	}
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="EnergyGenerator" class="no-javascript_generators lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="EnergyGenerator" class="no-javascript_generators lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="EnergyGenerator" class="no-javascript_generators lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="EnergyGenerator" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Energy-Generator</title>
+    <link rel="shortcut icon" href="assets/favicon.ico">
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="javascript/bower_components/font-awesome/css/font-awesome.min.css">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="javascript/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet"
+          href="javascript/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css"/>
+    <link rel="stylesheet" href="javascript/bower_components/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="javascript/bower_components/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="javascript/bower_components/angular-ui-grid/ui-grid.css">
+
+    <link rel="stylesheet" href="javascript/bower_components/frame-module/assets/css/themes/rubyred.css">
+    <link rel="stylesheet" href="javascript/bower_components/ui-directives/assets/css/themes/rubyred.css">
+    <link rel="stylesheet" href="styles/rubyred.css">
+    <link rel="stylesheet" href="styles/app.css">
+
+    <script src="javascript/bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <!--Libs-->
+    <!—jQuery-->
+    <script src="javascript/bower_components/jquery/dist/jquery.js"></script>
+    <script src="javascript/bower_components/jquery-ui/jquery-ui.min.js"></script>
+
+    <!--Moment-->
+    <script src="javascript/bower_components/moment/moment.js"></script>
+    <script src="javascript/bower_components/moment/locale/de.js"></script>
+    <script src="javascript/bower_components/moment-range/lib/moment-range.js"></script>
+
+    <!--Underscore-->
+    <script src="javascript/bower_components/underscore/underscore-min.js"></script>
+    <script src="javascript/bower_components/lodash/lodash.js"></script>
+
+    <!--LogLevel-->
+    <script src="javascript/bower_components/loglevel/dist/loglevel.min.js"></script>
+
+    <!--Bootstrap-->
+    <script src="javascript/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="javascript/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="javascript/bower_components/bootstrap-autohidingnavbar/src/jquery.bootstrap-autohidingnavbar.js"></script>
+
+    <!--Angular-->
+    <script src="javascript/bower_components/angular/angular.js"></script>
+    <script src="javascript/bower_components/angular-route/angular-route.js"></script>
+
+    <script src="javascript/bower_components/angular-animate/angular-animate.min.js"></script>
+
+    <script src="javascript/bower_components/angular-translate/angular-translate.min.js"></script>
+    <script src="javascript/bower_components/angular-translate-loader-partial/angular-translate-loader-partial.min.js"></script>
+    <script src="javascript/bower_components/angular-i18n/angular-locale_de-de.js"></script>
+
+    <script src="javascript/bower_components/angular-spinner/angular-spinner.min.js"></script>
+    <script src="javascript/bower_components/angular-ui-grid/ui-grid.js"></script>
+    <script src="javascript/bower_components/angular-file-upload/dist/angular-file-upload.min.js"></script>
+    <script src="javascript/bower_components/ngDraggable/ngDraggable.js"></script>
+    <script src="javascript/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="javascript/bower_components/ng-socket/ngSocket.js"></script>
+    <script src="javascript/bower_components/ace-builds/src-min-noconflict/ace.js"></script>
+    <script src="javascript/bower_components/angular-ui-ace/ui-ace.js"></script>
+    <script src="javascript/bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="javascript/bower_components/angular-material/angular-material.min.js"></script>
+
+    <!--- KISTERS Frame Module -->
+    <script src="javascript/bower_components/frame-module/frame-module.js"></script>
+
+    <!--- KISTERS UI-directives -->
+    <script src="javascript/bower_components/ui-directives/ui-directives.js"></script>
+    <script src="javascript/bower_components/ui-directives/kilocale-provider.js"></script>
+
+    <!--APP-->
+    <script src="javascript/app.js"></script>
+    <script src="javascript/router.js"></script>
+
+    <!--Controller-->
+    <script src="javascript/controllers/app.controller.js"></script>
+    <script src="javascript/controllers/mocks/mock.list.controller.js"></script>
+    <script src="javascript/controllers/mocks/mock.item.controller.js"></script>
+
+    <script src="javascript/controllers/code/code.item.controller.js"></script>
+    <script src="javascript/controllers/code/code.list.controller.js"></script>
+
+
+    <!--Services-->
+    <script src="javascript/services/app.service.js"></script>
+    <script src="javascript/services/mocks/mock.service.js"></script>
+    <script src="javascript/services/mocks/mock.service.js"></script>
+
+    <!--Directives-->
+    <script src="javascript/directives/app.directives.js"></script>
+
+    <!--Filters-->
+    <script src="javascript/filters/app.filters.js"></script>
+</head>
+<body>
+
+<div class="estyle" style="min-width:1280px;">
+    <kiheader></kiheader>
+    <ki-side-menu reduced="ctrl.reduced">
+        <ki-side-menu-item title="LISTE DER MOCKS" icon="fa-bars" link="#!/mock"></ki-side-menu-item>
+        <ki-side-menu-item title="MOCK ANLEGEN" icon="fa-sign-language" link="#!/mock/-1"></ki-side-menu-item>
+        <ki-side-menu-item title="LISTE DER CODES" icon="fa-clone" link="#!/code"></ki-side-menu-item>
+    </ki-side-menu>
+
+    <div class="ki-content" ng-class="ctrl.reduced ? 'ki-content-expanded':'ki-content-reduced'">
+        <div class="container">
+            <ng-view id="content"></ng-view>
+        </div>
+    </div>
+</div>
+</body>
+</html>

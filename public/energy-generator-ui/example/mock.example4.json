@@ -1,0 +1,11 @@
+{
+  "_id" : ObjectId("588a108422fb4e0ad890d03a"),
+  "successProcentage" : 100,
+  "timeoutProcentage" : 100,
+  "quantity" : 8,
+  "template" : {
+    "MOCKTEM" : {
+      "enum" : "ENUMENUMENUM"
+    }
+  }
+}

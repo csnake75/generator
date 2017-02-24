@@ -87,3 +87,14 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+public/energy-generator-ui/.idea
+public/energy-generator-ui/node_modules
+public/energy-generator-ui/public/javascript/bower_components
+script/energy-generator-generator/log
+script/energy-generator-generator/target
+script/energy-generator-generator/.idea
+server/energy-generator-code/.idea
+server/energy-generator-code/node_modules
+server/energy-generator-mock/.idea
+server/energy-generator-mock/node_modules
